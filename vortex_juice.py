@@ -23,7 +23,7 @@ class SubjectIndex:
         
         
 
-class VortexData:
+class FacultyData:
     def __init__( self, url ):
         self.data = urlopen( location + "/" + suffix ).read()
 
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     for s in si.get_faculty_links():
         print s
     
-    v = VortexData( location + "/" + suffix )
+    v = FacultyData( location + "/" + suffix )
     v.save( "matnat.dat" )
 
 
