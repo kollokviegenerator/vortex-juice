@@ -4,6 +4,25 @@ from random import sample
 from xml.dom.minidom import parseString, parse
 
 
+class SubjectIndex:
+    def __init__( self, url = "http://www.uio.no/studier/emner/" ):
+        self.url = url
+        self.page = urlopen( self.url ).read()
+        self.excluded = set( ["alfabetisk", "alphabetical", "nedlagt"] )
+        
+    def get_faculty_links( self ):
+        pattern = "emner/\w+"
+        relatives = findall( pattern, self.page )
+        absolutes = set( 
+            [ ( self.url.replace( "emner/", "" ) + e ) for e in relatives ] 
+        )
+        
+        # here
+        
+        return absolutes
+        
+        
+
 class VortexData:
     def __init__( self, url ):
         self.data = urlopen( location + "/" + suffix ).read()
@@ -48,6 +67,11 @@ class VortexData:
         result = [c[0][0] for c in result if c[0][0] != ""]
         
         return result
+        
+    def save( self, name ):
+        text = "\n".join( self.get_subject_codes() )
+        with open( "matnat.dat", "w" ) as output:
+            output.write(text)
 
 
 
@@ -55,10 +79,12 @@ if __name__ == "__main__":
     location = "http://www.uio.no/studier/emner/"
     suffix = "matnat"
     
-    v = VortexData( location + "/" + suffix )
-    text = "\n".join( v.get_subject_codes() )
+    si = SubjectIndex()
     
-    with open( "matnat.dat", "w" ) as output:
-        output.write(text)
+    for s in si.get_faculty_links():
+        print s
+    
+    v = VortexData( location + "/" + suffix )
+    v.save( "matnat.dat" )
 
 
