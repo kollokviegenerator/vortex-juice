@@ -88,8 +88,8 @@ class FacultyData:
         )
     
     def get_subject_codes( self ):
-        complex_subject = "(\w{1,4}-\w{1,4}\d{1,4})+"
-        regular_subject = "(\w{1,4}\d{1,4})+"
+        complex_subject = "(\w{1,5}-\w{1,5}\d{1,5})+"
+        regular_subject = "(\w{1,5}\d{1,5})+"
         #exceptions = "([AZ]){1,10}"
         pattern = "(" + complex_subject + "|" + regular_subject + ")+"
         result = [ match(pattern, d)
@@ -125,11 +125,9 @@ if __name__ == "__main__":
         for i in institutes:
             url = "http://www.uio.no/studier/emner/%s/%s" % (faculty, i)
             data = FacultyData( url=url )
-
             filename = "%s" % (faculty)
             if i != "":
                 filename = "%s-%s" % (faculty, i.replace("/", "") )
-
             data.save( filename )
 
 
