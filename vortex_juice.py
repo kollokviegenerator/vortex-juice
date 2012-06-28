@@ -4,28 +4,57 @@ from random import sample
 from xml.dom.minidom import parseString, parse
 
 
-class SubjectIndex:
-    def __init__( self, url = "http://www.uio.no/studier/emner/" ):
+class FacultyIndex:
+    def __init__( self, url="http://www.uio.no/studier/emner/" ):
         self.url = url
         self.page = urlopen( self.url ).read()
-        self.excluded = set( ["alfabetisk", "alphabetical", "nedlagt"] )
+        self.excluded = set( ["alfabetisk", "alphabetical", "nedlagt" ] ) #"index", "v12", "v13", "h12"] )
+        self.prefix = "emner/"
         
-    def get_faculty_links( self ):
-        pattern = "emner/\w+"
+    def get_faculties( self ):
+        pattern = self.prefix + "\w+"
         relatives = findall( pattern, self.page )
-        absolutes = set( 
-            [ ( self.url.replace( "emner/", "" ) + e ) for e in relatives ] 
-        )
-        
-        # here
-        
-        return absolutes
-        
-        
+        # remove prefix
+        relatives = [l.replace( self.prefix, "" ) for l in relatives ]
+        # gather unique
+        relatives = set(relatives)
+        # remove excluded
+        relatives = relatives.difference( self.excluded )
+
+        return relatives
+
+class InstituteIndex:
+    def __init__( self, faculties, url="http://www.uio.no/studier/emner/" ):
+        self.url = url
+        self.page = urlopen( self.url ).read()
+        self.faculties = faculties
+        self.prefix = "studier/emner/"
+
+    def get_all_institutes( self ):
+
+        institutes = []
+
+        for f in self.faculties:
+            pattern = "%s%s/%s" % (self.prefix, f, "\w+/")
+            relatives = findall( pattern, self.page )
+            relatives = [l.replace( self.prefix + f, "" ) for l in relatives ]
+            institutes += relatives
+
+        return set(institutes)
+
+    def get_institutes_of_faculty( self, faculty ):
+        pattern = "%s%s/%s" % (self.prefix, faculty, "\w+/")
+        relatives = findall( pattern, self.page )
+        relatives = [l.replace( self.prefix + faculty, "" ) for l in relatives ]
+
+        return set(relatives)
+
+
+
 
 class FacultyData:
-    def __init__( self, url ):
-        self.data = urlopen( location + "/" + suffix ).read()
+    def __init__( self, url="http://www.uio.no/studier/emner/" ):
+        self.data = urlopen( url ).read()
 
 
     def get_subject_descriptions( self ):
@@ -61,30 +90,50 @@ class FacultyData:
     def get_subject_codes( self ):
         complex_subject = "(\w{1,4}-\w{1,4}\d{1,4})+"
         regular_subject = "(\w{1,4}\d{1,4})+"
-        pattern = "(" + complex_subject + "|" + regular_subject + ")+"
+        exceptions = "([AZ]){1,10}"
+        pattern = "(" + complex_subject + "|" + regular_subject + ")+ " + "|" + exceptions
         result = [ findall(pattern, d) 
             for d in self.get_subject_descriptions() ]
-        result = [c[0][0] for c in result if c[0][0] != ""]
-        
+        try:
+            result = [c[0][0] for c in result if c[0][0] != ""]
+        except IndexError:
+            print result
+
         return result
         
     def save( self, name ):
-        text = "\n".join( self.get_subject_codes() )
-        with open( "matnat.dat", "w" ) as output:
+        try:
+            text = "\n".join( self.get_subject_codes() )
+        except TypeError:
+            text = self.get_subject_codes().__str__()
+        with open( "%s.dat" % name, "w" ) as output:
             output.write(text)
 
 
 
 if __name__ == "__main__":
-    location = "http://www.uio.no/studier/emner/"
-    suffix = "matnat"
-    
-    si = SubjectIndex()
-    
-    for s in si.get_faculty_links():
-        print s
-    
-    v = FacultyData( location + "/" + suffix )
-    v.save( "matnat.dat" )
+    faculties = ( FacultyIndex() ).get_faculties()
+    institutes = InstituteIndex( faculties )
+
+    structure = {}
+    for f in faculties:
+        members = institutes.get_institutes_of_faculty( f )
+        if len(members) > 0:
+            structure[f] = members
+
+    #structure["annet"].add( "/teologi/" )
+    print structure
+
+    for (faculty, institutes) in structure.iteritems():
+        for i in institutes:
+            url = "http://www.uio.no/studier/emner/%s/%s" % (faculty, i)
+            data = FacultyData( url=url )
+
+            filename = "%s" % (faculty)
+            if i != "":
+                filename = "%s-%s" % (faculty, i.replace("/", "") )
+
+            data.save( filename )
+
 
 
