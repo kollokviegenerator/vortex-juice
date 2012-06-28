@@ -90,17 +90,14 @@ class FacultyData:
     def get_subject_codes( self ):
         complex_subject = "(\w{1,4}-\w{1,4}\d{1,4})+"
         regular_subject = "(\w{1,4}\d{1,4})+"
-        exceptions = "([AZ]){1,10}"
-        pattern = "(" + complex_subject + "|" + regular_subject + "|" + exceptions + ")+ "
-        result = [ findall(pattern, d) 
+        #exceptions = "([AZ]){1,10}"
+        pattern = "(" + complex_subject + "|" + regular_subject + ")+"
+        result = [ match(pattern, d)
             for d in self.get_subject_descriptions() ]
 
-        try:
-            result = [c[0][0] for c in result if c[0][0] != ""]
-        except IndexError:
-            print result
-            result = "*"
 
+
+        result = [m.group(1) for m in result if m != None]
 
         return result
         
