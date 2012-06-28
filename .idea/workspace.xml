@@ -5,58 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d8812f2-a92d-4690-a24a-4cc69cd0ac9d" name="Default" comment="non-robust drain fixed">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vortex-juice.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/annet-skk.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/annet-sum.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/hf-iakh.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/hf-ibsensenteret.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/hf-ifikk.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/hf-ikos.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/hf-iln.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/hf-ilos.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/hf-imk.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/hf-imv.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/jus-afin.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/jus-humanrights.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/jus-ikrs.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/jus-jus.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-astro.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-biologi.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-farmasi.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-fys.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-geofag.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-ifi.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-kjemi.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-math.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-molbio.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/matnat-sfe.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/medisin-helseadm.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/medisin-helsefag.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/medisin-inthealth.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/medisin-ipsy.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/medisin-isv.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/medisin-med.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/medisin-nutri.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/odont-tannlege.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/odont-tannpleie.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/sv-iss.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/sv-oekonomi.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/sv-psykologi.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/sv-sai.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/sv-statsvitenskap.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/sv-sv.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/sv-tik.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/uv-ils.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/uv-isp.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/uv-pfi.dat" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/medisin-helsefag.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/medisin-isv.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/medisin-med.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/annet-skk.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/annet-sum.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/hf-iakh.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/hf-ibsensenteret.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/hf-ifikk.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/hf-ikos.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/hf-iln.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/hf-ilos.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/hf-imk.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/hf-imv.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/jus-afin.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/jus-humanrights.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/jus-ikrs.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/jus-jus.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-astro.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-biologi.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-farmasi.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-fys.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-geofag.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-ifi.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-kjemi.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-math.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-molbio.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/matnat-sfe.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/medisin-helseadm.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/medisin-inthealth.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/medisin-ipsy.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/medisin-nutri.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/odont-tannlege.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/odont-tannpleie.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sv-iss.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sv-oekonomi.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sv-psykologi.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sv-sai.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sv-statsvitenskap.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sv-sv.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sv-tik.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/uv-ils.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/uv-isp.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/uv-pfi.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vortex-juice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,7 +73,7 @@
       <file leaf-file-name="vortex_juice.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vortex_juice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="0" selection-start="3359" selection-end="3359" vertical-scroll-proportion="2.2217143">
+            <state line="19" column="26" selection-start="717" selection-end="717" vertical-scroll-proportion="0.39085713">
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -304,7 +296,11 @@
       <created>1340877691681</created>
       <updated>1340877691681</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="non-robust drain fixed">
+      <created>1340877729141</created>
+      <updated>1340877729141</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -391,7 +387,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/vortex_juice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="0" selection-start="3359" selection-end="3359" vertical-scroll-proportion="2.2217143">
+        <state line="19" column="26" selection-start="717" selection-end="717" vertical-scroll-proportion="0.39085713">
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
