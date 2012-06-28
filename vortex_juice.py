@@ -91,22 +91,22 @@ class FacultyData:
         complex_subject = "(\w{1,4}-\w{1,4}\d{1,4})+"
         regular_subject = "(\w{1,4}\d{1,4})+"
         exceptions = "([AZ]){1,10}"
-        pattern = "(" + complex_subject + "|" + regular_subject + ")+ " + "|" + exceptions
+        pattern = "(" + complex_subject + "|" + regular_subject + "|" + exceptions + ")+ "
         result = [ findall(pattern, d) 
             for d in self.get_subject_descriptions() ]
+
         try:
             result = [c[0][0] for c in result if c[0][0] != ""]
         except IndexError:
             print result
+            result = "*"
+
 
         return result
         
     def save( self, name ):
-        try:
-            text = "\n".join( self.get_subject_codes() )
-        except TypeError:
-            text = self.get_subject_codes().__str__()
-        with open( "%s.dat" % name, "w" ) as output:
+        text = "\n".join( self.get_subject_codes() )
+        with open( "data/%s.dat" % name, "w" ) as output:
             output.write(text)
 
 
